@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>销售计划系统</title>
+
+    <link rel="stylesheet" type="text/css" href="http://ls.jd.com/resources/soneuiv2/css/third-party.min.css" />
+    <!-- ui标准化组件样式 -->
+    <link rel="stylesheet" type="text/css" href="http://ls.jd.com/resources/soneuiv2/css/sone-ui.min.css" />
+
+    <!-- third party -->
+    <script type="text/javascript" src="http://ls.jd.com/resources/soneuiv2/js/third-party/vendors.min.js"></script>
+
+    <script type="text/javascript" src="http://ls.jd.com/resources/soneuiv2/js/sone-ui/sone-ui.min.js"></script>
+    <!-- 去除iframe -->
+    <script type="text/javascript" src="http://ls.jd.com/resources/js/dashboard-init-href.js"></script>
+
+    <!-- ui标准化 通用插件 包括daterangepicker、combo等插件 -->
+    <script type="text/javascript" src="http://ls.jd.com/resources/soneuiv2/js/sone-widget/sone-widget.min.js"></script>
+    <script type="text/javascript" src="http://ls.jd.com/resources/soneuiv2/js/third-party/iframeResizer.contentWindow.js"></script>
+
+    <!-- Start Open Web Analytics Tracker 统计pv uv -->
+    <script type="text/javascript">
+      var _paq = _paq || []
+      ;(function() {
+        var u = '//pvuv.ls.jd.com/piwik/'
+        _paq.push(['setTrackerUrl', u + 'piwik.php'])
+        _paq.push(['setSiteId', 1])
+        var d = document
+        var g = d.createElement('script')
+        var s = d.getElementsByTagName('script')[0]
+        g.type = 'text/javascript'
+        g.async = true
+        g.defer = true
+        g.src = u + 'piwik.js'
+        s.parentNode.insertBefore(g, s)
+      })()
+    </script>
+    <noscript
+      ><p><img src="//pvuv.ls.jd.com/piwik/piwik.php?idsite=1" style="border:0;" alt="" /></p
+    ></noscript>
+  </head>
+  <body>
+    <div id="page-wrapper">
+      <!-- 当前登录人信息 -->
+      <input type="hidden" id="curUserErpCode" /> <input type="hidden" id="curUserChineseName" /> <input type="hidden" id="curUserUserId" />
+      <input type="hidden" id="curUserOrganizationId" /> <input type="hidden" id="curUserEmail" />
+      <!-- right-side -->
+
+      <div id="app"></div>
+      <!-- built files will be auto injected -->
+      <script src="./static/js/lib/lib.dll.js"></script>
+      <script type="text/javascript">
+        window.onload = function() {
+          var html = document.getElementsByTagName('html')[0]
+          var w = window.document.body.clientWidth
+          html.style.fontSize = (w / 1300) * 120 + 'px'
+        }
+      </script>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,230 @@
+@import '../lib/rem-tools.less';
+@import '../tool.less';
+.board {
+  //.w(1100);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .check-card {
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    // .margin(5,5,5,5);
+  }
+
+  .card-subject {
+    font-weight: normal;
+    font-size: 14px;
+    color: #ffffff;
+    line-height: 14px;
+    display: inline-block;
+  }
+
+  .left {
+    width: 70%;
+    .reached {
+      flex: 1 1 auto;
+      .check-card {
+        height: 120px;
+        background: linear-gradient(-135deg, #78c9ef 0%, #61ade0 100%);
+
+        .main-font {
+          font-size: 42px;
+          line-height: 42px;
+          color: #ffffff;
+        }
+
+        .value-padding-top {
+          font-size: 42px;
+          line-height: 42px;
+        }
+      }
+    }
+    .time {
+      flex: 1 1 auto;
+      .check-card {
+        height: 120px;
+        background: linear-gradient(-135deg, #78c9ef 0%, #61ade0 100%);
+        .main-font {
+          font-size: 42px;
+          line-height: 42px;
+          color: #ffffff;
+        }
+
+        .value-padding-top {
+          font-size: 42px;
+          line-height: 42px;
+          font-family: PingFangSC-Semibold;
+        }
+
+        .card-subject {
+          // font-family: PingFangSC-Semibold;
+          // font-size: 14px;
+          color: #ffffff;
+          // line-height: 14px;
+          // display: inline-block;
+        }
+      }
+    }
+
+    .target {
+      width: 33%;
+      .check-card {
+        height: 194px;
+        background: #f5f5f5;
+        .main-font {
+          font-size: 42px;
+          line-height: 42px;
+          color: #47a7e7;
+        }
+        .border-top {
+          border-top: 1px solid #ffffff;
+        }
+
+        .value-padding-top {
+          font-size: 42px;
+          line-height: 42px;
+          font-family: PingFangSC-Semibold;
+        }
+
+        .yoy {
+          margin-top: 20px;
+          padding-left: 10px;
+          padding-right: 10px;
+        }
+        .mom {
+          margin-top: 50px;
+          padding-left: 10px;
+          padding-right: 10px;
+        }
+        .text {
+          display: inline-block;
+          width: 50%;
+          float: left;
+          text-align: left;
+        }
+        .percent {
+          display: inline-block;
+          width: 50%;
+          float: right;
+          text-align: right;
+        }
+
+        .card-subject {
+          // font-size: 14px;
+          color: #666666;
+          // display: inline-block;
+        }
+      }
+    }
+  }
+  .right {
+    flex: 1 1 atuo;
+    //.w(370);
+    width: 30%;
+
+    .cate {
+      //.w(175);
+      width: 50%;
+      .check-card {
+        box-sizing: border-box;
+        margin: 5px;
+        height: 157px;
+        background: #f5f5f5;
+        .main-font {
+          font-size: 36px;
+          line-height: 36px;
+          color: #333333;
+        }
+
+        .value-padding-top {
+          margin-top: 20px;
+          font-size: 36px;
+          line-height: 36px;
+          font-family: PingFangSC-Semibold;
+        }
+
+        .card-subject {
+          //   font-family: PingFangSC-Semibold;
+          //   font-size: 14px;
+          color: #666666;
+          //   line-height: 14px;
+          //   display: inline-block;
+          //   white-space: nowrap;
+          //   overflow: hidden;
+        }
+      }
+    }
+    .saler {
+      .w(305);
+      display: inline-block;
+      .check-card {
+        height: 157px;
+        background: #f5f5f5;
+        .main-font {
+          font-size: 36px;
+          line-height: 36px;
+          color: #333333;
+        }
+
+        .value-padding-top {
+          font-size: 36px;
+          line-height: 36px;
+          font-family: PingFangSC-Semibold;
+        }
+
+        .card-subject {
+          // font-family: PingFangSC-Semibold;
+          // font-size: 14px;
+          color: #666666;
+          // line-height: 14px;
+          // display: inline-block;
+        }
+      }
+    }
+    .sku {
+      //.w(355);
+      width: 92%;
+      .pl(10);
+      display: inline-block;
+      .check-card {
+        height: 157px;
+        background: #f5f5f5;
+        .main-font {
+          font-size: 36px;
+          line-height: 36px;
+          color: #333333;
+        }
+
+        .value-padding-top {
+          font-size: 36px;
+          line-height: 36px;
+          font-family: PingFangSC-Semibold;
+        }
+
+        // .card-subject {
+        //   font-family: PingFangSC-Semibold;
+        //   font-size: 14px;
+        //   color: #666666;
+        //   line-height: 14px;
+        //   display: inline-block;
+        // }
+      }
+    }
+  }
+
+  .text-hidd {
+    //text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .value-padding-top {
+    padding-top: 5px;
+  }
+
+  .ivu-input {
+    background-color: #fff !important;
+  }
+}

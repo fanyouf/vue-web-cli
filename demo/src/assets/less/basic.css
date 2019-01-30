@@ -1,0 +1,558 @@
+/*px--rem*/
+/* 设计稿的 1/10 */
+.el-menu-item a {
+  display: block;
+}
+
+.page .el-table--enable-row-hover .el-table__body tr:hover > td {
+  background-color: #dedede !important;
+}
+
+.page .el-table--striped .el-table__body tr.el-table__row--striped td {
+  background-color: #f5f5f5 !important;
+}
+
+.page .el-table td,
+.page .el-table th {
+  padding: 1px 0 !important;
+}
+
+.page .el-table td .cellCanEdit {
+  color: #47a7e7;
+}
+
+.page .el-table td .font {
+  font-weight: bold;
+}
+
+.page .el-table__body,
+.page .el-table__footer,
+.page .el-table__header {
+  table-layout: automatic;
+}
+
+.page .el-input-number--small {
+  width: 100px;
+}
+
+.page .el-input-number--mini {
+  width: 90px;
+}
+
+.page .el-tree > .el-tree-node {
+  min-width: 100%;
+  display: inline-block !important;
+}
+
+.page .ivu-btn {
+  padding: 0rem 0.16666667rem 0rem 0.16666667rem;
+  height: 32px;
+  line-height: 32px;
+}
+
+.page .ivu-btn-small {
+  padding-left: 5px;
+  padding-right: 5px;
+  height: 24px;
+  line-height: 1;
+}
+
+.page .ivu-poptip-body-content {
+  overflow: hidden;
+}
+
+.page .ivu-select-selection {
+  height: 20px;
+  overflow: hidden;
+}
+
+.page label {
+  font-weight: normal;
+  margin-bottom: 0;
+}
+
+.page .detailTable .ivu-input {
+  background-color: #fff !important;
+  margin: 2px !important;
+}
+
+.flexa {
+  display: flex;
+  align-items: center;
+}
+
+.flexb {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.center {
+  text-align: center;
+}
+
+.padding {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.pd15 {
+  padding: 15px;
+}
+
+.mr20 {
+  margin-right: 20px;
+}
+
+.ml15 {
+  margin-left: 15px;
+}
+
+.mw120 {
+  min-width: 120px;
+}
+
+.mw100 {
+  max-width: 100px;
+}
+
+.mw60 {
+  max-width: 60px;
+}
+
+.w100 {
+  width: 100px;
+}
+
+.w80 {
+  width: 80px;
+}
+
+.w90 {
+  width: 90px;
+}
+
+.icon {
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.icon-btn {
+  border-radius: 3px;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.icon-btn:hover {
+  box-shadow: 1px 1px 3px solid #333;
+  font-weight: bold;
+}
+
+.icon-btn-current {
+  box-shadow: 1px 1px 3px solid #333;
+  border: 1px solid #47a7e7;
+}
+
+html {
+  font-size: 120px;
+}
+
+body {
+  font-family: 'MicrosoftYaHei-Bold';
+  font-size: 0.11666667rem;
+  background-color: #f2f2f2;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+}
+
+.page {
+  /*完整的页面*/
+  padding-top: 10px;
+  height: 100%;
+  margin: 0 10px;
+  display: flex;
+  flex: 1 1 auto;
+  position: relative;
+}
+
+.page .toggleBtn {
+  cursor: pointer;
+  top: 7px;
+  left: -11px;
+  position: absolute;
+  z-index: 1000;
+  font-size: 20px;
+  color: #2d8cf0;
+  &:hover {
+    font-size: 40px;
+  }
+}
+
+.page .analyzeBoard {
+  padding: 10px;
+  padding-top: 0px;
+}
+
+.page .analyzeBoard .analyzeBoard-title {
+  font-size: 0.13333333rem;
+  color: #333;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 50px;
+}
+
+.page .analyzeBoard .analyzeBoard-title:after {
+  position: absolute;
+  bottom: 0;
+  content: '';
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: #ccc;
+}
+
+.page .analyzeBoard .analyzeBoard-condition {
+  padding-left: 5px;
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  height: 50px;
+  background-color: #f5f5f5;
+  justify-content: space-between;
+}
+
+.page .analyzeBoard .analyzeBoard-condition .analyzeBoard-condition-btns {
+  display: flex;
+  align-items: center;
+}
+
+.page .analyzeBoard .analyzeBoard-condition .analyzeBoard-condition-btns > div {
+  margin-right: 10px;
+}
+
+.page .analyzeBoard .analyzeBoard-condition .analyzeBoard-condition-icons {
+  margin-left: auto;
+  margin-right: 10px;
+}
+
+.page .analyzeBoard .analyzeBoard-condition .analyzeBoard-condition-icons .iconfont {
+  font-size: 0.2rem;
+}
+
+.page .analyzeBoard .analyzeBoard-content {
+  max-height: 4.16666667rem;
+  overflow: hidden;
+}
+
+.page .analyzeBoard .analyzeBoard-content .analyzeBoard-content-title {
+  font-size: 0.11666667rem;
+  font-weight: bold;
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+}
+
+.page .analyzeBoard .analyzeBoard-content .analyzeBoard-content-title .icon-btn {
+  width: 1em;
+  height: 1em;
+}
+
+.page .analyzeBoard .ve-funnel,
+.page .analyzeBoard .ve-scatter {
+  flex: 1 1 auto;
+}
+
+.page .sideBar {
+  flex: 0 0 auto;
+  width: 252px;
+  padding: 10px;
+  border-radius: 4px;
+  background: #fff;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+  margin-right: 10px;
+  overflow: auto;
+  height: 100%;
+}
+
+.page .sideBar .ivu-cascader {
+  width: 100%;
+}
+
+.page .sideBar .sideBarTool_btns {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /*搜索框中有刷选条件，表示强调*/
+}
+
+.page .sideBar .sideBarTool_btns .bold {
+  color: red;
+}
+
+.page .sideBar .sideBarTool_btns .ivu-btn {
+  width: 0.83333333rem;
+}
+
+.page .sideBar .sideBarTool_btns .icon-btn {
+  width: 30px;
+  height: 30px;
+}
+
+.page .sideBar .sideBarTool_btns .tool {
+  display: flex;
+  align-items: center;
+}
+
+.page .sideBar .sideBarTool_btns .ivu-radio-group {
+  /*单选组*/
+  display: flex;
+  flex-direction: column;
+  /*垂直排列*/
+  height: 100%;
+  overflow: hidden;
+}
+
+.page .mainContainer {
+  height: 100%;
+  overflow: auto;
+  border-radius: 4px;
+  background: #fff;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+  flex: 1 1 auto;
+}
+
+.page .mainContainer .nav-level1 {
+  line-height: 50px;
+  height: 50px;
+  background-color: #f7f7f7;
+  font-size: 14px;
+}
+
+.page .mainContainer .nav-level1 span {
+  display: inline-block;
+  cursor: pointer;
+  width: 94px;
+  position: relative;
+  text-align: center;
+}
+
+.page .mainContainer .nav-level1 .current {
+  color: #47a7e7;
+}
+
+.page .mainContainer .nav-level1 .current::after {
+  content: '';
+  position: absolute;
+  height: 2px;
+  width: 94px;
+  left: 0;
+  bottom: 0;
+  background-color: #47a7e7;
+}
+
+.page .mainContainer .nav-level2 {
+  padding: 12px;
+}
+.tablistArea {
+  padding: 0rem 0.08333333rem 0.08333333rem 0.08333333rem;
+}
+
+.tablistArea .h4 {
+  line-height: 0.13333333rem;
+  font-size: 0.11666667rem;
+  color: #333;
+  margin-top: 0.08333333rem;
+  margin-bottom: 0.08333333rem;
+}
+
+.tablistArea .el-table .cell {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+/*单独的卡片*/
+.card {
+  margin: 5px;
+}
+
+.card .card-title {
+  position: relative;
+  display: flex;
+  align-items: center;
+  line-height: 50px;
+  line-height: 40px;
+  height: 40px;
+}
+
+.card .card-title h4 {
+  font-size: 15px;
+  margin-bottom: 3px;
+}
+
+.card .card-title::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  left: 0px;
+  bottom: 0px;
+  background-color: #ccc;
+}
+
+.card .card-title-btns {
+  margin-left: auto;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.card .card-title-btns .ivu-icon {
+  margin: 0 3px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.conditionBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /*左边是时间与周期 ，右边是按钮s*/
+  height: 40px;
+  background-color: #f5f5f5;
+  padding: 0rem 0.08333333rem 0rem 0.08333333rem;
+  font-size: 14px;
+}
+
+.conditionBar .conditionBar-btns {
+  display: flex;
+  align-items: center;
+}
+
+.conditionBar .conditionBar-btns button {
+  margin-left: 5px;
+}
+
+.conditionBar .ivu-radio-wrapper.ivu-radio-group-item.ivu-radio-wrapper-checked {
+  background-color: #57a3f3;
+  /*#47A7E7*/
+  color: #fff;
+}
+
+.toolbar {
+  /*工具条*/
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  padding-left: 0.08333333rem;
+  height: 40px;
+  line-height: 1;
+  background-color: #f5f5f5;
+  border-top: 1px solid #fff;
+}
+
+.toolbar .ivu-switch,
+.toolbar .ivu-switch:after {
+  border-radius: 4px;
+}
+
+.toolbar .ivu-switch-checked .ivu-switch-inner {
+  left: 4px;
+}
+
+.toolbar .ivu-switch {
+  width: 56px;
+}
+
+.toolbar .ivu-switch-checked:after {
+  left: 32px;
+}
+
+.toolbar .icon-btn {
+  width: 20px;
+  height: 20px;
+  padding: 0px;
+  line-height: 20px;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+.toolbar .icon-btn:hover {
+  color: #000;
+}
+
+.toolbar .ivu-poptip-body-content {
+  overflow: hidden;
+}
+
+.toolbar .toolbar-ibtncontainer-attribute .ivu-poptip-popper {
+  width: 300px;
+}
+
+.toolbar .toolbar-ibtncontainer-calibration .ivu-poptip-popper {
+  width: 150px;
+  height: 520px;
+}
+
+.toolbar .toolbar-ibtnbody-title {
+  background-color: #ccc;
+  color: #fff;
+}
+
+.toolbar .ivu-radio-group {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.toolbar .ivu-radio-wrapper {
+  flex: 0 1 60px;
+}
+
+.toolbar .btn__modify__total {
+  /*总值修改*/
+}
+
+.toolbar .btn__modify__total .ivu-btn {
+  width: 80px;
+  height: 20px;
+  padding: 0px;
+  line-height: 20px;
+  background: #f5f5f5;
+  color: #000;
+  border: none;
+  margin-right: 5px;
+}
+
+.toolbar .btn__modify__total .ivu-btn:hover {
+  color: #000;
+}
+
+.chartContainer {
+  display: flex;
+}
+
+.chartContainer .chart {
+  flex: 1 1 aut0;
+}
+
+.rangeTable .el-table th > .cell {
+  font-weight: bold;
+  color: #000000;
+}
+
+input:not([type='button']):disabled,
+input:not([type='button'])[readonly],
+select:disabled,
+select[readonly],
+textarea:disabled,
+textarea[readonly] {
+  background-color: #fff;
+  color: #777;
+}

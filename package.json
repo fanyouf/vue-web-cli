@@ -1,0 +1,27 @@
+{
+  "name": "vue-web-cli",
+  "version": "0.0.1",
+  "description": "快速创建vue单页应用",
+  "main": "index.js",
+  "bin": {
+    "vue-web-cli": "./bin/index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fanyoufu/vue-web-cli.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fanyoufu/vue-web-cli/issues"
+  },
+  "homepage": "https://github.com/fanyoufu/vue-web-cli#readme",
+  "dependencies": {
+    "commander": "^2.19.0",
+    "inquirer": "^6.2.1"
+  }
+}

@@ -1,0 +1,215 @@
+/*px--rem*/
+/* 设计稿的 1/10 */
+.board {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.board .check-card {
+  padding-top: 21px;
+  padding-bottom: 21px;
+  padding-right: 0.04166667rem;
+  padding-left: 0.04166667rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin: 0.04166667rem 0.04166667rem 0.04166667rem 0.04166667rem;
+}
+.board .left {
+  flex: 1 1 atuo;
+  width: 70%;
+}
+.board .left .reached {
+  width: 48%;
+  display: inline-block;
+}
+.board .left .reached .check-card {
+  height: 120px;
+  background: linear-gradient(-135deg, #78C9EF 0%, #61ADE0 100%);
+}
+.board .left .reached .check-card .main-font {
+  font-size: 42px;
+  line-height: 42px;
+  color: #ffffff;
+}
+.board .left .reached .check-card .value-padding-top {
+  font-size: 42px;
+  line-height: 42px;
+  font-family: PingFangSC-Semibold;
+}
+.board .left .reached .check-card .card-subject {
+  font-family: PingFangSC-Semibold;
+  font-size: 14px;
+  color: #ffffff;
+  line-height: 14px;
+  display: inline-block;
+}
+.board .left .time {
+  width: 49%;
+  display: inline-block;
+}
+.board .left .time .check-card {
+  height: 120px;
+  background: linear-gradient(-135deg, #78C9EF 0%, #61ADE0 100%);
+}
+.board .left .time .check-card .main-font {
+  font-size: 42px;
+  line-height: 42px;
+  color: #ffffff;
+}
+.board .left .time .check-card .value-padding-top {
+  font-size: 42px;
+  line-height: 42px;
+  font-family: PingFangSC-Semibold;
+}
+.board .left .time .check-card .card-subject {
+  font-family: PingFangSC-Semibold;
+  font-size: 14px;
+  color: #ffffff;
+  line-height: 14px;
+  display: inline-block;
+}
+.board .left .target {
+  width: 32%;
+  margin: 0rem 0.01666667rem 0rem 0rem;
+  display: inline-block;
+}
+.board .left .target .check-card {
+  height: 194px;
+  background: #F5F5F5;
+}
+.board .left .target .check-card .main-font {
+  font-size: 42px;
+  line-height: 42px;
+  color: #47A7E7;
+}
+.board .left .target .check-card .border-top {
+  border-top: 1px solid #FFFFFF;
+}
+.board .left .target .check-card .value-padding-top {
+  font-size: 42px;
+  line-height: 42px;
+  font-family: PingFangSC-Semibold;
+}
+.board .left .target .check-card .yoy {
+  margin-top: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.board .left .target .check-card .mom {
+  margin-top: 50px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.board .left .target .check-card .text {
+  display: inline-block;
+  width: 50%;
+  float: left;
+  text-align: left;
+}
+.board .left .target .check-card .percent {
+  display: inline-block;
+  width: 50%;
+  float: right;
+  text-align: right;
+}
+.board .left .target .check-card .card-subject {
+  font-family: PingFangSC-Semibold;
+  font-size: 14px;
+  color: #666666;
+  display: inline-block;
+}
+.board .right {
+  flex: 1 1 atuo;
+  width: 30%;
+}
+.board .right .cate {
+  width: 45%;
+  padding-left: 0.08333333rem;
+  display: inline-block;
+}
+.board .right .cate .check-card {
+  height: 157px;
+  background: #F5F5F5;
+}
+.board .right .cate .check-card .main-font {
+  font-size: 36px;
+  line-height: 36px;
+  color: #333333;
+}
+.board .right .cate .check-card .value-padding-top {
+  margin-top: 20px;
+  font-size: 36px;
+  line-height: 36px;
+  font-family: PingFangSC-Semibold;
+}
+.board .right .cate .check-card .card-subject {
+  font-family: PingFangSC-Semibold;
+  font-size: 14px;
+  color: #666666;
+  line-height: 14px;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.board .right .saler {
+  width: 2.54166667rem;
+  display: inline-block;
+}
+.board .right .saler .check-card {
+  height: 157px;
+  background: #F5F5F5;
+}
+.board .right .saler .check-card .main-font {
+  font-size: 36px;
+  line-height: 36px;
+  color: #333333;
+}
+.board .right .saler .check-card .value-padding-top {
+  font-size: 36px;
+  line-height: 36px;
+  font-family: PingFangSC-Semibold;
+}
+.board .right .saler .check-card .card-subject {
+  font-family: PingFangSC-Semibold;
+  font-size: 14px;
+  color: #666666;
+  line-height: 14px;
+  display: inline-block;
+}
+.board .right .sku {
+  width: 92%;
+  padding-left: 0.08333333rem;
+  display: inline-block;
+}
+.board .right .sku .check-card {
+  height: 157px;
+  background: #F5F5F5;
+}
+.board .right .sku .check-card .main-font {
+  font-size: 36px;
+  line-height: 36px;
+  color: #333333;
+}
+.board .right .sku .check-card .value-padding-top {
+  font-size: 36px;
+  line-height: 36px;
+  font-family: PingFangSC-Semibold;
+}
+.board .right .sku .check-card .card-subject {
+  font-family: PingFangSC-Semibold;
+  font-size: 14px;
+  color: #666666;
+  line-height: 14px;
+  display: inline-block;
+}
+.board .text-hidd {
+  overflow: hidden;
+  white-space: nowrap;
+}
+.board .value-padding-top {
+  padding-top: 5px;
+}
+.board .ivu-input {
+  background-color: #fff !important;
+}

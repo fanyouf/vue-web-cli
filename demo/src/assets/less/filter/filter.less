@@ -1,0 +1,45 @@
+//快速搜索框
+.filter-search {
+  height: 295px;
+  position: relative;
+  &::before {
+    content: '';
+    width: 1px;
+    height: 280px;
+    background-color: #ccc;
+    position: absolute;
+    left: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.filter-right {
+  width: 55%;
+}
+
+.filter-fast {
+  width: 40%;
+  vertical-align: top;
+}
+
+.filter-scroll {
+  height: 250px;
+  overflow-y: scroll;
+  text-overflow: ellipsis;
+  overflow-x: hidden;
+}
+
+.search-padding {
+  padding: 3px 5px;
+  margin-bottom: 4px;
+}
+
+.pr5 {
+  padding-left: 5px;
+}
+
+.h20 {
+  padding-top: 5px;
+  height: 30px;
+}

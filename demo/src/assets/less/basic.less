@@ -1,0 +1,465 @@
+@import './lib/rem-tools.less';
+@import './element-extend.less';
+@import './iview-extend.less';
+@import './tool.less';
+
+@nice-blue: #47a7e7;
+
+.nonumber {
+  outline: #f00 solid thick;
+}
+.icon {
+  width: 1em;
+  height: 1em;
+  // vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.icon-btn {
+  //border:1px solid #ccc;
+  border-radius: 3px;
+  cursor: pointer;
+  box-sizing: border-box;
+  &:hover {
+    box-shadow: 1px 1px 3px solid #333;
+    //border:1px solid @nice-blue;
+    font-weight: bold;
+  }
+}
+.icon-btn-current {
+  box-shadow: 1px 1px 3px solid #333;
+  border: 1px solid @nice-blue;
+}
+
+html {
+  font-size: 120px;
+}
+body {
+  font-family: 'MicrosoftYaHei-Bold';
+  .fs(14);
+  background-color: rgb(242, 242, 242);
+}
+.menu {
+  // .lh(60);
+  // .h(60);
+  // height: 60px;
+  // line-height: 60px;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+}
+/*完整的页面*/
+.page {
+  padding-top: 10px;
+  height: 100%;
+  margin: 0 10px;
+  display: flex;
+  flex: 1 1 auto;
+  position: relative;
+  // 显示/隐藏侧边栏
+  .toggleBtn {
+    cursor: pointer;
+    top: 0px;
+    left: -11px;
+    position: absolute;
+    z-index: 1000;
+    font-size: 20px;
+    color: #2d8cf0;
+    &:hover {
+      transform: scale(2, 2);
+    }
+  }
+  .analyzeBoard {
+    padding: 10px;
+    padding-top: 0px;
+    .analyzeBoard-title {
+      .fs(16);
+      color: #333;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 50px;
+    }
+
+    .analyzeBoard-title:after {
+      position: absolute;
+      bottom: 0;
+      content: '';
+      left: 0;
+      right: 0;
+      height: 1px;
+      background-color: #ccc;
+    }
+    .analyzeBoard-condition {
+      padding-left: 5px;
+      margin-bottom: 5px;
+      display: flex;
+      align-items: center;
+      height: 50px;
+      background-color: #f5f5f5;
+      justify-content: space-between;
+      .analyzeBoard-condition-btns {
+        display: flex;
+        align-items: center;
+        // flex:1 1 atuo;
+        > div {
+          margin-right: 10px;
+        }
+      }
+      .analyzeBoard-condition-icons {
+        .iconfont {
+          .fs(24);
+        }
+        margin-left: auto;
+        margin-right: 10px;
+      }
+    }
+
+    .analyzeBoard-content {
+      .analyzeBoard-content-title {
+        .fs(14);
+        font-weight: bold;
+        color: #333;
+        .icon-btn {
+          width: 1em;
+          height: 1em;
+        }
+        display: flex;
+        justify-content: space-between;
+      }
+      .mh(500);
+      overflow: hidden;
+    }
+    // 分析看板中的漏斗图 散点图
+    .ve-funnel,
+    .ve-scatter {
+      flex: 1 1 auto;
+    }
+  }
+
+  .sideBar {
+    flex: 0 0 auto;
+    //.w(252);
+    width: 252px;
+    padding: 10px;
+    //.padding(10,10,10,10);
+    border-radius: 4px;
+    background: #fff;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+    margin-right: 10px;
+    overflow: auto;
+    height: 100%;
+
+    .ivu-cascader {
+      width: 100%;
+    }
+
+    .sideBarTool_btns {
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .bold {
+        color: red;
+      } /*搜索框中有刷选条件，表示强调*/
+      .ivu-btn {
+        .w(100);
+      }
+      .icon-btn {
+        width: 30px;
+        height: 30px;
+      }
+      .tool {
+        display: flex;
+        align-items: center;
+      }
+      .ivu-radio-group {
+        /*单选组*/
+        display: flex;
+        flex-direction: column; /*垂直排列*/
+        height: 100%;
+        overflow: hidden;
+        // .w(200);
+      }
+      .ivu-poptip-body {
+      }
+    }
+  }
+  .mainContainer {
+    height: 100%;
+    overflow: auto;
+    border-radius: 4px;
+    background: #fff;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+    flex: 1 1 auto;
+
+    .nav-level1 {
+      line-height: 50px;
+      height: 50px;
+      background-color: #f7f7f7;
+      font-size: 14px;
+      span {
+        display: inline-block;
+        cursor: pointer;
+        width: 94px;
+        position: relative;
+        text-align: center;
+      }
+      .current {
+        color: @nice-blue;
+      }
+      .current::after {
+        content: '';
+        position: absolute;
+        height: 2px;
+        width: 94px;
+        left: 0;
+        bottom: 0;
+        background-color: @nice-blue;
+      }
+    }
+    .nav-level2 {
+      padding: 12px;
+      button {
+      }
+    }
+  }
+}
+
+.tablistArea {
+  .bold {
+    font-weight: bold !important;
+    > div {
+      font-weight: bold !important;
+    }
+  }
+  .cellCanEdit {
+    color: #47a7e7;
+  }
+  .editing .cellCanEdit {
+    cursor: pointer;
+  }
+  .padding(0, 10, 10, 10);
+  .h4 {
+    font-weight: normal;
+    .lh(16);
+    .fs(14);
+    color: #333;
+    .mt(10);
+    .mb(10);
+  }
+  .el-table {
+    .drag {
+      cursor: move;
+    }
+
+    .cell {
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+  }
+}
+//去掉预测页面中可编辑单元格的背景色
+.forecast .tablistArea .cellCanEdit {
+  color: inherit !important;
+}
+/*单独的卡片*/
+
+.card {
+  margin: 5px;
+  .card-title {
+    position: relative;
+    display: flex;
+    align-items: center;
+    line-height: 50px;
+    h4 {
+      font-size: 15px;
+      margin-bottom: 3px;
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      left: 0px;
+      bottom: 0px;
+      background-color: #ccc;
+    }
+    line-height: 40px;
+    height: 40px;
+  }
+  .card-title-btns {
+    margin-left: auto;
+    display: flex;
+    flex-direction: row-reverse;
+
+    .ivu-icon {
+      margin: 0 3px;
+      font-size: 24px;
+      cursor: pointer;
+    }
+  }
+}
+
+.conditionBar {
+  display: flex;
+  align-items: center;
+  /*justify-content: space-between; 左边是时间与周期 ，右边是按钮s*/
+  height: 40px;
+  background-color: #f5f5f5;
+  .padding(0, 10, 0, 10);
+  font-size: 14px;
+
+  .conditionBar-btns {
+    margin-left: 30px;
+    .flexa;
+    button {
+      margin-left: 5px;
+    }
+  }
+  .ivu-radio-wrapper.ivu-radio-group-item.ivu-radio-wrapper-checked {
+    background-color: #57a3f3; /*#47A7E7*/
+    color: #fff;
+  }
+}
+.toolbar {
+  /*工具条*/
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  padding-left: 6px;
+  height: 40px;
+  line-height: 1;
+  background-color: #f5f5f5;
+  border-top: 1px solid #fff;
+
+  .ivu-switch,
+  .ivu-switch:after {
+    border-radius: 4px;
+  }
+  .ivu-switch-checked .ivu-switch-inner {
+    left: 4px;
+  }
+  .ivu-switch {
+    width: 70px;
+  }
+  .ivu-switch-checked:after {
+    left: 42px;
+  }
+  .icon-btn {
+    width: 20px;
+    height: 20px;
+    padding: 0px;
+    line-height: 20px;
+    margin-right: 5px;
+    margin-left: 5px;
+    &:hover {
+      color: #000;
+    }
+  }
+  .ivu-poptip-body-content {
+    overflow: hidden;
+  }
+  .toolbar-ibtncontainer-attribute .ivu-poptip-popper {
+    width: 300px;
+    // height: 120px;
+  }
+  .toolbar-ibtncontainer-calibration .ivu-poptip-popper {
+    width: 150px;
+    height: 520px;
+  }
+  .toolbar-ibtnbody-title {
+    background-color: #ccc;
+    color: #fff;
+  }
+  // .ivu-radio-group {
+  //   display: flex;
+  //   flex-wrap: wrap;
+  // }
+  .ivu-radio-wrapper {
+    flex: 0 1 60px;
+  }
+  .btn__modify__total {
+    /*总值修改*/
+    .ivu-btn {
+      width: 80px;
+      height: 20px;
+      padding: 0px;
+      line-height: 20px;
+      background: #f5f5f5;
+      color: #000;
+      border: none;
+      margin-right: 5px;
+      &:hover {
+        color: #000;
+      }
+    }
+  }
+}
+
+// .forecast{
+//   .padding(15,15,15,15);
+//
+//   .title{
+//     .fs(16);
+//     color:#333;
+//     position: relative;
+//     display: flex;
+//     align-items: center;
+//     justify-content: space-between;
+//     height:50px;
+//     h4{
+//       margin-right: 20px;
+//       flex: 0 0 auto;
+//     }
+//     .ivu-radio-group{
+//       flex: 0 0 auto;
+//       margin-left:20px;
+//     }
+//   }
+//
+//   .title:after{
+//     position: absolute;
+//     bottom:0;
+//     content: "";
+//     left:0;right:0;height: 1px;
+//     background-color: #ccc;
+//   }
+// }
+
+.chartContainer {
+  display: flex;
+  // height: 400px;
+
+  .chart {
+    flex: 1 1 aut0;
+  }
+}
+
+.price {
+}
+
+.rangeTable {
+  .el-table th > .cell {
+    font-weight: bold;
+    //line-height: 24px;
+    //font-size:20px;
+    color: #000000;
+  }
+}
+
+//覆盖掉零智菜单样式冲突
+input:not([type='button']):disabled,
+input:not([type='button'])[readonly],
+select:disabled,
+select[readonly],
+textarea:disabled,
+textarea[readonly] {
+  background-color: #fff;
+  color: #777;
+}
