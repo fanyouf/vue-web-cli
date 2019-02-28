@@ -1,18 +1,12 @@
 
-# cli-web
-构建一个最小环境来学习 typescript 。
+# vue-web-cli
 
-- 自动builder
-- 在网页中使用
-- 通过live-server自动刷新
-- 支持less
-- 使用gulp
-
+使用vue技术栈快速创建应用
 
 ## 安装
 
 ```
-npm install -g cli-web
+npm install -g vue-cli-web
 ```
 
 ## 创建项目
